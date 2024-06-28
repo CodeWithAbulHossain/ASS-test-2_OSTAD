@@ -70,3 +70,58 @@ const numbersArray2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const oddNumbersArray = filterOddNumbers(numbersArray2);
 console.log(oddNumbersArray);
+
+// 6) Write a function named ‘sumArray’ that takes an array of numbers and returns the sum of all elements.
+
+function sumArray(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
+}
+
+const array = [1, 3, 5, 7, 8, 10];
+const arrayResult = sumArray(array);
+sumArray(arrayResult);
+console.log(arrayResult);
+
+// 7) Write a function named ‘sortArray’ that takes an array of numbers and returns a new array sorted in ascending order.
+
+function sortArray(arr) {
+  let arrCopy = arr.slice();
+
+  arrCopy.sort(function (a, b) {
+    return a - b;
+  });
+  return arrCopy;
+}
+
+const numbers = [5, 1, 3, 15, 7, 9, 55, 31, 22, 19];
+const sortedNumbers = sortArray(numbers);
+sortArray(sortedNumbers);
+
+console.log(sortedNumbers);
+
+// 8) Write a function named ‘capitalizeFirstLetter’ that takes a string and returns the same string with the first letter capitalized. Ex-  console.log(capitalizeFirstLetter("hello"));  // Output:  "Hello"
+
+function capitalizeFirstLetter(str) {
+  if (str.length === 0) {
+    return str;
+  }
+
+  let firstLetter = str.charAt(0).toUpperCase();
+  let restOfString = str.slice(1);
+
+  let capitalizedString = firstLetter + restOfString;
+
+  return capitalizedString;
+}
+
+capitalizeFirstLetter("hello");
+capitalizeFirstLetter("world");
+capitalizeFirstLetter("javascript");
+
+console.log(capitalizeFirstLetter("hello"));
+console.log(capitalizeFirstLetter("world"));
+console.log(capitalizeFirstLetter("javascript"));
